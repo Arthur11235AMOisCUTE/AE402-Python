@@ -1,15 +1,15 @@
 'import time'
-
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
 '''
 print("I'm Eric")
 print('He is "cool"')
 '''
-
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
 '''
 name = input('Who are you? (Please enter your name) : ')
 print('Hi! {} ~ How are you today~/n/n'.format(name))
 '''
-
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
 '''
 r = input('Enter the radius about the circle : ')
 
@@ -25,7 +25,7 @@ print('This is the perimeter that you want to know about the circle  : {}'.forma
 
 print('This is the area that you want to know about the circle       : {}'.format(a))
 '''
-
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
 '''
 s = input('Enter your score : ')
 
@@ -36,6 +36,7 @@ elif int(s) >= 60:
 else:
     print('FAIL   (score : {})'.format(s))
 '''
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
 
 s = input('Enter your score : ')
 
