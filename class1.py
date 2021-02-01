@@ -37,7 +37,7 @@ else:
     print('FAIL   (score : {})'.format(s))
 '''
 #&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
-
+'''
 s = input('Enter your score : ')
 
 if int(s) > 100 or int(s) < 0:
@@ -52,3 +52,14 @@ elif int(s) >= 60:
     print('PASS level[D]  (score : {})'.format(s))
 else:
     print('FAIL level[F]  (score : {})'.format(s))
+'''
+#&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
+ms = float(input('Enter your MATH score : '))
+es = float(input('Enter your English score : '))
+
+if ms>=90 and es>=90:
+    print('\nprize')
+elif ms<60 and es<60:
+    print('\npunishment')
+elif ms<60 or es<60:
+    print('\nkeep going')
