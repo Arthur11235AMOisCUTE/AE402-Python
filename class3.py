@@ -41,13 +41,13 @@ print('\n The AVERAGE score in the class is : {}'.format(avescore))
 
 #&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
 
-#----------------------------------------------------------------------人數相關#
+#---------------------------------------------------------------------------------人數相關#
 
 stcount = input("How many students'math scores you need to count?\n(Enter a number) : ")
 scorel = []
 stl = []
 
-debugstcount = True#判斷人數是否為數字
+debugstcount = True  #判斷人數是否為數字
 while debugstcount:
     try:
         stcount = int(stcount)
@@ -55,11 +55,11 @@ while debugstcount:
     except:
         stcount =input("\n!!!You must enter a number!!!\nHow many students'math scores you need to count?\n(Enter a number) : ")
 
-#----------------------------------------------------------------------名字相關#
+#---------------------------------------------------------------------------------名字相關#
 
-nameTF = input('\nDo you want to enter their name? (Yes = 1, No = 2) : ')#是否有名字
+nameTF = input('\nDo you want to enter their name? (Yes = 1, No = 2) : ')  #是否要名字
 
-if nameTF == '1':#輸入名字
+if nameTF == '1':  #輸入名字
     for n in range(int(stcount)):
         x = n + 1
         stname = input('\nPlease enter the NAME of student{}: '.format(x))
@@ -69,12 +69,12 @@ else:
         x = n + 1
         stl.append('student{}'.format(x))
 
-#----------------------------------------------------------------------分數相關#
+#---------------------------------------------------------------------------------分數相關#
 
 hhscore = input('\nPlease enter the FULL SCORE : ')
 debughhscore = True
 
-while debughhscore:#判斷最高分是否為數字
+while debughhscore:  #判斷最高分是否為數字
     try:
         hhscore = int(hhscore)
         debughhscore = False
@@ -84,7 +84,7 @@ while debughhscore:#判斷最高分是否為數字
 for s in range(int(stcount)):
     stscore = input('\nPlease enter the SCORE of {}: '.format(stl[s]))
 
-    debugscorenum = True#判斷分數是否為數字
+    debugscorenum = True  #判斷分數是否為數字
     while debugscorenum:
         try:
             stscore = int(stscore)
@@ -92,7 +92,7 @@ for s in range(int(stcount)):
         except:
             stscore = input('\n!!!You must enter a NUMBER!!!\nPlease enter the SCORE of {}: '.format(stl[s]))
 
-    debugscorerange = True#判斷分數範圍
+    debugscorerange = True  #判斷分數範圍
     while debugscorerange:
         if stscore <= int(hhscore) and stscore >= 0:
             scorel.append(int(stscore))
@@ -107,18 +107,20 @@ lscore = scorel[0]
 hscorename = []
 lscorename = []
 
-for l in range(len(scorel)):#判斷高低分
+for l in range(len(scorel)):  #判斷高低分
     if scorel[l] > hscore:
         hscore = scorel[l]
     if scorel[l] < lscore:
         lscore = scorel[l]
 
-for y in range(len(scorel)):#判斷高低分是誰
+for y in range(len(scorel)):  #判斷高低分是誰
     if scorel[y] == hscore:
         hscorename.append(stl[y])
 
     if scorel[y] == lscore:
         lscorename.append(stl[y])
+
+#---------------------------------------------------------------------------------輸出結果#
 
 hstn1 = str(hscorename).strip("[]")
 hstn = str(hstn1).replace("'",'')
@@ -135,4 +137,47 @@ else:
     print('\nThe student who got the LOWEST score in the class is : \n{}\n -- score : {}'.format(lstn,lscore))
     print('\nThe AVERAGE score in the class is : {}'.format(avescore))
 input('\n\nEnter any key to EXIT')
+
 #&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
+
+'''
+
+#二維陣列版(未完善，僅能基礎使用)
+
+stcount = input("How students'math scores you need to count?\n(Enter a number) : ")
+scorel = []
+st = []
+sumscore = 0
+for i in range(int(stcount)):
+    x = i + 1
+    stname = input('Please enter the name of student{} : '.format(x))
+    st.append(stname)
+    stscore = input('Please enter the score of : '.format(st[0]))
+    st.append(int(stscore))
+    scorel.append(st)
+    sumscore += int(stscore)
+    st = []
+    
+#print(scorel)
+
+hname = scorel[0][0]
+lname = scorel[0][0]
+hscore = scorel[0][1]
+lscore = scorel[0][1]
+
+for n in range(len(scorel)):
+    if scorel[n][1] > hscore:
+        hname = scorel[n][0]
+        hscore = scorel[n][1]
+    if scorel[n][1] < lscore:
+        lname = scorel[n][0]
+        lscore = scorel[n][1]
+        
+avescore = sumscore/int(stcount)
+
+print('\n The HIGHEST score in the class is : {}\n--Name:{}'.format(hscore,hname))
+print('\n The LOWEST score in the class is : {}\n--Name:{}'.format(lscore,lname))
+print('\n The AVERAGE score in the class is : {}'.format(avescore))
+
+'''
+
