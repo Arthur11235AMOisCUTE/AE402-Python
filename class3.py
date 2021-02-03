@@ -134,5 +134,5 @@ else:
     print('\nThe student who got the HIGHEST score in the class is : \n{}\n -- score : {}'.format(hstn,hscore))
     print('\nThe student who got the LOWEST score in the class is : \n{}\n -- score : {}'.format(lstn,lscore))
     print('\nThe AVERAGE score in the class is : {}'.format(avescore))
-
+input('\n\nEnter any key to EXIT')
 #&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&#
