@@ -53,10 +53,10 @@ if os.path.isfile('dien.txt'):
         value = value.strip()
         
         dien[key] = value
-    else:
-        fileen = open('dien.txt','w',encoding = 'UTF-8')
-        for k,v in dien.items():
-            fileen.write(k+':'+v+'\n')
+else:
+    fileen = open('dien.txt','w',encoding = 'UTF-8')
+    for k,v in dien.items():
+        fileen.write(k+':'+v+'\n')
 
 filech.close()
 fileen.close()
@@ -114,6 +114,7 @@ while onoff:
                 
             if (key in dien and dien[key] == ennone) or not key in dien:
                 valueen = input('請輸入 {} 之英文解釋 (鍵入pass0可跳過) : '.format(key))
+                
             else:
                 print('本單字" {} "已有英文解釋 --{}\n若需更改解釋請移除該單字後重新建立'.format(key,dien[key]))
                 valueen = dien[key]
@@ -130,6 +131,8 @@ while onoff:
                 dien[key] = valueen
             
             reload_dict()
+
+            print('收錄完成')
 
 ###############################################################################
 
@@ -244,15 +247,15 @@ while onoff:
                 uans = input('\n第{}題\n請鍵入 " {} " 該釋義之英文單字 : '.format(x,testl[lnum]))
                 for k,v in dich.items():
                     if v == testl[lnum]:
-                        if uans == k:
+                        ans = k
+                        if uans == ans:
                             score += 1
-                            ans = k
                             got = True
                 for k,v in dien.items():
                     if v == testl[lnum]:
-                        if uans == k:
+                        ans = k
+                        if uans == ans:
                             score += 1
-                            ans = k
                             got = True
                 if got:
                     print('你答對了!\n正確答案為 " {} " \n目前分數 {}/{}'.format(ans,score,testlen))
