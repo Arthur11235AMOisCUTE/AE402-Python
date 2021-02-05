@@ -207,7 +207,7 @@ while onoff:
         else:
             for k,v in dich.items():
                 if v == ch:
-                    print('該單字 " {} " 之英文解釋為 \n--{}'.format(ch,dien[k]))
+                    print('該單字 " {} " 之英文為 \n--{}'.format(ch,k))
                     got = True
             if not got:
                 print('無法將 " {} " 翻譯成英文(未收錄於本典)'.format(ch))

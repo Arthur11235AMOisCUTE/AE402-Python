@@ -1,0 +1,12 @@
+pass:跳過
+red:紅色
+water:水
+blue:藍色
+cattle:牛
+cow:母牛，奶牛
+clothes:本單字尚未建立中文解釋
+wind:風
+desk:書桌
+smart:聰明
+tea:茶
+table:桌子
